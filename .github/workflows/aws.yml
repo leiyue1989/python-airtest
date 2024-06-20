@@ -17,13 +17,8 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
-    - name: Setup SSH
-      run: |
-        mkdir -p ~/.ssh
-        echo ${{ secrets.AWS_SSH_KEY }} > ~/.ssh/id_rsa
-        chmod 600 ~/.ssh/id_rsa
-      # ssh-keyscan -H 44.240.11.43 >> ~/.ssh/known_hosts
-
     - name: Deploy to AWS
       run: |
         ssh -i ~/.ssh/id_rsa ec2-user@44.240.11.43 'echo "hello world"'
+
+runs-on: self-hosted
