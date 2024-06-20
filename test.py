@@ -8,5 +8,5 @@ def fibonacci(n):
         a, b = b, a + b
 
 
-for i in fibonacci(10):
+for i in fibonacci(11):
     print(i)
