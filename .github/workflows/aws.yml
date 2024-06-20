@@ -18,7 +18,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Deploy to AWS
+      runs-on: self-hosted
       run: |
         ssh -i ~/.ssh/id_rsa ec2-user@44.240.11.43 'echo "hello world"'
 
-runs-on: self-hosted
