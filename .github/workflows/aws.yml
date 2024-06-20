@@ -20,7 +20,7 @@ jobs:
     - name: Setup SSH
       run: |
         mkdir -p ~/.ssh
-        cat "${{ secrets.AWS_SSH_KEY }}" > ~/.ssh/id_rsa
+        echo ${{ secrets.AWS_SSH_KEY }} > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
         ls -al ~/.ssh/id_rsa
       # ssh-keyscan -H 44.240.11.43 >> ~/.ssh/known_hosts
