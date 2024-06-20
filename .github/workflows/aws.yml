@@ -19,5 +19,5 @@ jobs:
 
     - name: Deploy to AWS
       run: |
-        ssh -i ~/.ssh/id_rsa ec2-user@44.240.11.43 'echo "hello world"'
+        ssh -i ~/.ssh/id_rsa ec2-user@44.240.11.43 'ls -al'
 
